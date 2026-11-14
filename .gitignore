@@ -1,2 +1,5 @@
 *.html
 .DS_Store
+backup/
+private-work/
+.env

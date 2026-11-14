@@ -1,30 +1,44 @@
-# 01 つなぎ方
+# 01つなぎ方
+
+> 私が確かめた環境：**DaVinci Resolve Studio 21.2（Build 5）・Mac（Appleシリコン）・Claude Code**。ほかの版・ほかのOS・ほかのAIでは試していません。新しい版にしたら、まず下の「安全な5分テスト」をやり直してください
 
 ## 必要なもの
 
 | もの | 説明 |
 |---|---|
-| **DaVinci Resolve Studio**（有料版） | 21.1 から、外の AI やスクリプトで Resolve を動かすには Studio が必要になりました。無料版ではできません。このキットは 21.2 で確かめています |
-| **AI** | 私は Claude Code を使っています（Claude の Pro プランからでも始められます）。Resolve は Codex、Google Antigravity、Grok などにもつなげられます。特定の AI に決めていないのが、DaVinci Resolve のよい所です |
-| パソコン | 私は Mac で使っています。Resolve の動作環境は Blackmagic Design の公式サイトで確かめてください（AI の機能を使うなら、メモリは多めに） |
-| 出先から使う場合だけ | スマホの Blackmagic Camera（無料）と Blackmagic Cloud（有料）。→ [06-remote-cloud.md](06-remote-cloud.md) |
+| **DaVinci Resolve Studio**（有料版） | AIから使える操作は、無料版では大きく限られます。このキットはStudioの21.2で確かめています（無料版では試していません） |
+| **AI** | 私はClaude Codeを使っています。Codexでも同じキットが使えます（AGENTS.mdを読みます）。どちらも、公式サイトの手順で入れて、サインインしておいてください。ターミナル（Macの「ターミナル」アプリ）で動かします。ClaudeはProプランでも試せます。長い動画を何本も回すなら、利用枠の大きいMaxプランが楽です。ResolveのSetup AI Assistantsの一覧には、ほかにGoogle Antigravity・Grokなども出てきます（Blackmagic Designの発表で例に挙がっているのはClaude・Claude Code・Codex。私が確かめたのはClaude Codeだけです） |
+| パソコン | 私はMac（Appleシリコン）で使っています。Windows・Linuxでは試していません。Resolveの動作環境はBlackmagic Designの公式サイトで確かめてください（AIの機能を使うなら、メモリは多めに） |
+| そのほかの道具 | テロップやラベルの画像・動画を作るレシピ（docs/10）では、AIがffmpegなどの道具を使います。入っていなければ、AIに入れ方から聞いてください |
+| 出先から使う場合だけ | スマホのBlackmagic Camera（無料）とBlackmagic Cloud（有料）。→ [06-remote-cloud.md](06-remote-cloud.md) |
 
 ## つなぐ手順
 
-1. DaVinci Resolve Studio を最新版（21.2 以降）にする
-2. Resolve のメニュー **ファイル ＞ Setup AI Assistants** を開き、使っている AI を選んで登録する
-3. AI を起動する（Claude Code なら、このキットを置いたフォルダで `claude`）
-4. 「DaVinci Resolve につながってる？ いま開いているプロジェクトの名前を教えて」と聞く。名前が返ってくれば、つながっています
+1. DaVinci Resolve Studioを最新版（21.2以降）にする
+2. Resolveのメニュー**ファイル ＞ Setup AI Assistants**を開き、使っているAIを選んで登録する
+3. AIを起動する（このキットを置いたフォルダで、Claude Codeなら`claude`、Codexなら`codex`）。**すでにAIを開いていた場合は、一度終了してから開き直す**（登録は、開き直したときに読み込まれます）
+4. 「DaVinci Resolveにつながってる？ いま開いているプロジェクトの名前を教えて」と聞く。名前が返ってくれば、つながっています
+
+## 安全な5分テスト（本番の素材を使う前に、必ず1回）
+
+1. Resolveで、**練習用の空のプロジェクト**を新しく作って開く（本番のプロジェクトは開かない）
+2. AIに「Resolveのバージョン、いま開いているプロジェクト名、タイムラインの一覧、フレームレートを読み上げて。何も変更しないで」と頼む
+3. 合っていたら、「新しい空のタイムラインを1本だけ作って」と頼む
+4. 作られたタイムラインを、あなたが画面で確かめる
+5. 練習用のプロジェクトを閉じて終わり（消さなくてよい）
+
+ここまでできたら、本番のプロジェクトで使う前に、AGENTS.mdの「本番の前の控え」（複製・.drp・DRT）をしてから始めてください。
 
 ## つながらないとき
 
-- **Resolve が起動しているか**：AI は、起動している Resolve に話しかけます。先に Resolve を開いておく
-- **Claude Code の場合**：`/mcp` と打って DaVinci Resolve を選び、接続し直す。それでもだめなら、Claude Code を一度終了して起動し直す
-- **Resolve を更新した直後**：Setup AI Assistants の登録を、もう一度やり直す
-- **画面にダイアログ（確認の窓）が出ていないか**：Resolve に確認の窓が開いていると、AI からの操作が効かないことがあります。窓を閉じてから頼み直す
+- **Resolveが起動しているか**：AIは、起動しているResolveに話しかけます。先にResolveを開いておく
+- **Claude Codeの場合**：`/mcp`と打ってDaVinci Resolveを選び、接続し直す。それでもだめなら、Claude Codeを一度終了して起動し直す
+- **Resolveを更新した直後**：Setup AI Assistantsの登録を、もう一度やり直す
+- **Resolveの環境設定**：環境設定 ＞ システム ＞ 一般 の「外部スクリプト（External scripting）」が「なし」になっていないか確かめる
+- **画面にダイアログ（確認の窓）が出ていないか**：Resolveに確認の窓が開いていると、AIからの操作が効かないことがあります。窓を閉じてから頼み直す
 
 ## どういう仕組みか（知っておくと会話がうまくいく）
 
-- AI は Resolve の**外**にいます。Resolve の中にチャットの欄が増えたのではありません。Resolve が「外の AI が操作できる入口（MCP という仕組み）」を開けていて、AI はそこから Resolve を動かします
-- 21.2 からは、AI が**コマを書き出して、自分で画面を見て確かめられる**ようになりました。「並べた → 本当に思ったとおりに並んだか見る」まで AI ができるので、任せられる範囲が広がりました
-- AI は、Resolve に入っている「スクリプトの API の説明」や「新しい機能の説明」を自分で読めます。知らない機能があっても、推測で動かずに調べてから使うよう、CLAUDE.md で頼んであります
+- AIはResolveの**外**にいます。Resolveの中にチャットの欄が増えたのではありません。Resolveが「外のAIが操作できる入口（MCPという仕組み）」を開けていて、AIはそこからResolveを動かします
+- 21.1.2から1コマ、21.2からはサムネの格子も、AIが**書き出して、自分で画面を見て確かめられる**ようになりました。「並べた → 本当に思ったとおりに並んだか見る」までAIができるので、任せられる範囲が広がりました
+- AIは、Resolveに入っている「スクリプトのAPIの説明」や「新しい機能の説明」を自分で読めます。知らない機能があっても、推測で動かずに調べてから使うよう、AGENTS.mdで頼んであります
