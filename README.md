@@ -2,6 +2,8 @@
 
 YouTubeチャンネル「デイブ」の動画「【DaVinci Resolve 21.2 × AI × Blackmagic Cloud】コーディング不要のAI自動＆リモート編集を徹底解説！」で紹介した、**AIと一緒にDaVinci Resolveで編集するやり方**を、あなたの手元で始めるためのキットです。
 
+▶ 動画：https://youtu.be/62H1BlzAjNI
+
 > **β版・作者の実践例です**。私（デイブ田中）がDaVinci Resolve Studio 21.2（Build 5）・Mac・Claude Codeで確かめた範囲で書いています。自己責任で、必ず控えを取ってからお使いください
 
 **これは完成品ではありません。あなたのAIと一緒に育てていく「芯（コア）」です。**
@@ -77,6 +79,7 @@ AIに頼んで、あなたが直したら、最後にこう送ってください
 | [AGENTS.md](AGENTS.md) | **安全の決まり**（既定で禁止の操作・本番の前の控え・作業の進め方）。Codexなどはこのファイルを自動で読みます |
 | [CLAUDE.md](CLAUDE.md) | Claude Code用の入口。中身はAGENTS.mdを読み込む1行だけです |
 | [MY_RULES.md](MY_RULES.md) | **あなたの決まり**。ここを育てます（最初は空っぽ） |
+| [examples/MY_RULES_example.md](examples/MY_RULES_example.md) | 育てたMY_RULES.mdの例（私の場合）。育つとこうなる、という見本 |
 | [docs/01-setup.md](docs/01-setup.md) | 必要なもの・つなぎ方・つながらないとき |
 | [docs/02-first-conversation.md](docs/02-first-conversation.md) | AIとの会話の進め方（調べさせる → 案を見せさせる → 作らせる → 確かめさせる）とプロンプトの例 |
 | [docs/03-cut-rules.md](docs/03-cut-rules.md) | カットの決まり（どこで切るか・余韻・言い直し・残すもの） |
@@ -90,6 +93,7 @@ AIに頼んで、あなたが直したら、最後にこう送ってください
 | [docs/11-grow.md](docs/11-grow.md) | **キットを育てる**（作業の終わりの一言・自分の書式を覚えさせる・合わない決まりを直す・月1回の見直し） |
 | [docs/12-recovery.md](docs/12-recovery.md) | 失敗したときの戻し方（止め方・控えからの戻し方） |
 | [docs/13-glossary.md](docs/13-glossary.md) | 用語集（MCP・DRT・.drp・SRT・Text+・プロキシなど） |
+| [CHANGELOG.md](CHANGELOG.md) | 更新の記録（どの版で確かめたか） |
 
 ## 大事な考え方
 
