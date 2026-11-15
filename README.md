@@ -58,6 +58,10 @@ docs/01の「安全な5分テスト」を、練習用のプロジェクトで一
 
 そのあとの会話の進め方は[docs/02-first-conversation.md](docs/02-first-conversation.md)にあります。
 
+### 3.5 練習パックで、最初の1本を通す
+
+5分テストが通ったら、作者が撮った4分35秒の素材と答え合わせの見本で、粗編集から字幕までを1回通してください。どこまでうまくいったかを、自分で判断できます。手順は[docs/00-first-edit.md](docs/00-first-edit.md)、素材はこのリポジトリの「Releases」の `practice-pack-v1.zip` にあります。
+
 ### 4. 作業の終わりに、決まりを1つ育てる
 
 AIに頼んで、あなたが直したら、最後にこう送ってください。これが、このキットのいちばん大事な使い方です。
@@ -80,6 +84,7 @@ AIに頼んで、あなたが直したら、最後にこう送ってください
 | [CLAUDE.md](CLAUDE.md) | Claude Code用の入口。中身はAGENTS.mdを読み込む1行だけです |
 | [MY_RULES.md](MY_RULES.md) | **あなたの決まり**。ここを育てます（最初は空っぽ） |
 | [examples/MY_RULES_example.md](examples/MY_RULES_example.md) | 育てたMY_RULES.mdの例（私の場合）。育つとこうなる、という見本 |
+| [docs/00-first-edit.md](docs/00-first-edit.md) | **最初の1本（練習パック）**：同じ素材で粗編集から字幕まで通し、見本と答え合わせする |
 | [docs/01-setup.md](docs/01-setup.md) | 必要なもの・つなぎ方・つながらないとき |
 | [docs/02-first-conversation.md](docs/02-first-conversation.md) | AIとの会話の進め方（調べさせる → 案を見せさせる → 作らせる → 確かめさせる）とプロンプトの例 |
 | [docs/03-cut-rules.md](docs/03-cut-rules.md) | カットの決まり（どこで切るか・余韻・言い直し・残すもの） |
