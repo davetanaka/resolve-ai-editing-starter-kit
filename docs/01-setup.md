@@ -7,14 +7,14 @@
 | もの | 説明 |
 |---|---|
 | **DaVinci Resolve Studio**（有料版） | AIから使える操作は、無料版では大きく限られます。このキットはStudioの21.2で確かめています（無料版では試していません） |
-| **AI** | 私はClaude Codeを使っています。Codexでも同じキットが使えます（AGENTS.mdを読みます）。どちらも、公式サイトの手順で入れて、サインインしておいてください。ターミナル（Macの「ターミナル」アプリ）で動かします。ClaudeはProプランでも試せます。長い動画を何本も回すなら、利用枠の大きいMaxプランが楽です。ResolveのSetup AI Assistantsの一覧には、ほかにGoogle Antigravity・Grokなども出てきます（Blackmagic Designの発表で例に挙がっているのはClaude・Claude Code・Codex。私が確かめたのはClaude Codeだけです） |
+| **AI** | 私はClaude Codeを使っています。Codexも、このキットの決まり（AGENTS.md）は読みます（編集の手順までは確かめていません）。どちらも、公式サイトの手順で入れて、サインインしておいてください。ターミナル（Macの「ターミナル」アプリ）で動かします。ClaudeはProプランでも試せます。長い動画を何本も回すなら、利用枠の大きいMaxプランが楽です。ResolveのSetup AI Assistantsの一覧には、ほかにGoogle Antigravity・Grokなども出てきます（Blackmagic Designの発表で例に挙がっているのはClaude・Claude Code・Codex。私が確かめたのはClaude Codeだけです） |
 | パソコン | 私はMac（Appleシリコン）で使っています。Windows・Linuxでは試していません。Resolveの動作環境はBlackmagic Designの公式サイトで確かめてください（AIの機能を使うなら、メモリは多めに） |
 | そのほかの道具 | テロップやラベルの画像・動画を作るレシピ（docs/10）では、AIがffmpegなどの道具を使います。入っていなければ、AIに入れ方から聞いてください |
 | 出先から使う場合だけ | スマホのBlackmagic Camera（無料）とBlackmagic Cloud（有料）。→ [06-remote-cloud.md](06-remote-cloud.md) |
 
 ## つなぐ手順
 
-1. DaVinci Resolve Studioを最新版（21.2以降）にする
+1. DaVinci Resolve Studioを21.2以降にする（私が確かめたのは21.2 Build 5です。それより新しい版では、動きが変わっていることがあります）
 2. Resolveのメニュー**ファイル ＞ Setup AI Assistants**を開き、使っているAIを選んで登録する
 3. AIを起動する（このキットを置いたフォルダで、Claude Codeなら`claude`、Codexなら`codex`）。**すでにAIを開いていた場合は、一度終了してから開き直す**（登録は、開き直したときに読み込まれます）
 4. 「DaVinci Resolveにつながってる？ いま開いているプロジェクトの名前を教えて」と聞く。名前が返ってくれば、つながっています
